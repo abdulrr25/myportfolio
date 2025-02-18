@@ -1,33 +1,18 @@
 import { Link, ProjectInfo } from "./types";
 
 export const links: Link[] = [
-  {
-    nameEng: "Home",
-    hash: "#home",
-  },
-  {
-    nameEng: "About",
-    hash: "#about",
-  },
-  {
-    nameEng: "Projects",
-    hash: "#projects",
-  },
-  {
-    nameEng: "Skills",
-    hash: "#skills",
-  },
-  {
-    nameEng: "Contact",
-    hash: "#contact",
-  },
+  { nameEng: "Home", hash: "#home" },
+  { nameEng: "About", hash: "#about" },
+  { nameEng: "Projects", hash: "#projects" },
+  { nameEng: "Skills", hash: "#skills" },
+  { nameEng: "Contact", hash: "#contact" },
 ];
 
 export const projectsData: ProjectInfo[] = [
   {
     title: "New Rangoli Builders Website",
     description:
-      "Designed and developed a fully responsive website for an interior designing company. This was my first freelancing project, where I implemented interactive UI components using Next.js, Tailwind CSS, and Framer Motion for smooth animations.",
+      "Freelance project for an interior designing firm. Built using Next.js, Tailwind CSS, and Framer Motion.",
     tags: ["React", "Next.js", "TypeScript", "Tailwind"],
     imageUrl: "/image1.png",
     link: "https://www.newrangolibuilders.in",
@@ -35,7 +20,7 @@ export const projectsData: ProjectInfo[] = [
   {
     title: "Tesla Clone",
     description:
-      "Recreated Tesla's official website as part of a self-learning challenge. Built from scratch using Next.js and Tailwind CSS, focusing on modern UI design and performance optimization.",
+      "A self-learning project replicating Tesla's website UI with Next.js and Tailwind CSS.",
     tags: ["React", "Next.js", "TypeScript", "Tailwind"],
     imageUrl: "/image2.png",
     link: "https://tesla-clone-flax-kappa.vercel.app/",
@@ -43,7 +28,7 @@ export const projectsData: ProjectInfo[] = [
   {
     title: "Shopify Website Clone",
     description:
-      "Developed a front-end replica of a Shopify-based clothing store using React and Next.js. Implemented dynamic product displays and a sleek, user-friendly design.",
+      "Built a front-end for a Shopify-like clothing store using Next.js and Tailwind CSS.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Node.js"],
     imageUrl: "/image3.png",
     link: "https://clothing-website-zeta.vercel.app/",
@@ -51,29 +36,29 @@ export const projectsData: ProjectInfo[] = [
   {
     title: "Legal-Llama",
     description:
-      "Built an AI-powered legal case validator using a Python RAG model. The model was trained on legal data and integrated with blockchain validation via smart contracts. Submitted for the BNB Chainlink Hackathon.",
+      "AI-powered legal case validator with blockchain verification. Built for BNB Chainlink Hackathon.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "SuperFluid", "Smart Contracts"],
     imageUrl: "/image4.png",
     link: "https://github.com/abdulrr25/legal-llama",
   },
 ];
 
-// Skill Set
+// Skill Set with Icons
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Python",
-  "C/C++",
-  "MongoDB",
-  "Express",
-  "Framer Motion",
+  { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+  { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+  { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+  { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+  { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+  { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+  { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+  { name: "Tailwind", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+  { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { name: "C/C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
+  { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+  
 ];
 
 // Button to view more projects on GitHub
