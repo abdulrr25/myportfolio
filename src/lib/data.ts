@@ -13,7 +13,7 @@ export const projectsData: ProjectInfo[] = [
     title: "New Rangoli Builders Website",
     description:
       "Freelance project for an interior designing firm. Built using Next.js, Tailwind CSS, and Framer Motion.",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind"],
+    tags: ["React", "Next.js", "TypeScript", "Tailwind", "Framer Motion"],
     imageUrl: "/image1.png",
     link: "https://www.newrangolibuilders.in",
   },
@@ -29,7 +29,7 @@ export const projectsData: ProjectInfo[] = [
     title: "Shopify Website Clone",
     description:
       "Built a front-end for a Shopify-like clothing store using Next.js and Tailwind CSS.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Node.js"],
+    tags: ["React", "Next.js", "TypeScript", "Tailwind", "MongoDB", "Node.js", "Express"],
     imageUrl: "/image3.png",
     link: "https://clothing-website-zeta.vercel.app/",
   },
@@ -37,7 +37,7 @@ export const projectsData: ProjectInfo[] = [
     title: "Legal-Llama",
     description:
       "AI-powered legal case validator with blockchain verification. Built for BNB Chainlink Hackathon.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "SuperFluid", "Smart Contracts"],
+    tags: ["React", "Next.js", "TypeScript", "MongoDB", "Tailwind", "Node.js", "Express", "SuperFluid", "Smart Contracts"],
     imageUrl: "/image4.png",
     link: "https://github.com/abdulrr25/legal-llama",
   },
