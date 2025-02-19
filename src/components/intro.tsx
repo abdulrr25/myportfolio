@@ -9,6 +9,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/useInView";
 import { Mail } from "lucide-react";
 import { useActiveSectionContext } from "@/container/active-section";
+import ArrowDownTrayIcon from "@heroicons/react/24/solid/ArrowDownTrayIcon";
 
 export default function Intro() {
   const { ref } = useSectionInView("#home", 0.5);
@@ -69,40 +70,51 @@ export default function Intro() {
       </Fade>
 
       <motion.div
-        className="flex sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
-      >
-        <Link
-          href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 dark:bg-white/10 active:scale-105 transition"
-          onClick={() => {
-            setActiveSection("#contact");
-            setTimeOfLastClick(Date.now());
-          }}
-        >
-          Get in Touch <Mail color={"#9ca3af"} />
-        </Link>
+  className="flex sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium"
+  initial={{ opacity: 0, y: 100 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{
+    delay: 0.1,
+  }}
+>
+  <Link
+    href="#contact"
+    className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 dark:bg-white/10 active:scale-105 transition"
+    onClick={() => {
+      setActiveSection("#contact");
+      setTimeOfLastClick(Date.now());
+    }}
+  >
+    Get in Touch <Mail color={"#9ca3af"} />
+  </Link>
 
-        <a
-          className="bg-gray-900 p-4 text-white flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://www.linkedin.com/in/abdulrr25/"
-          target="_blank"
-        >
-          <BsLinkedin />
-        </a>
+  <a
+    className="bg-gray-900 p-4 text-white flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+    href="https://www.linkedin.com/in/abdulrr25/"
+    target="_blank"
+  >
+    <BsLinkedin />
+  </a>
 
-        <a
-          className="bg-gray-900 p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com/abdulrr25"
-          target="_blank"
-        >
-          <FaGithubSquare />
-        </a>
-      </motion.div>
+  <a
+    className="bg-gray-900 p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+    href="https://github.com/abdulrr25"
+    target="_blank"
+  >
+    <FaGithubSquare />
+  </a>
+
+  {/* Resume Button */}
+  <a
+    href="https://drive.google.com/file/d/1F1ByYTWZHkiYpgl_1EeoQUcNERw6toAr/view?usp=sharing"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-gray-900 p-4 text-white flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+  >
+    <ArrowDownTrayIcon className="h-5 w-5" />
+    <span className="hidden sm:inline">Resume</span>
+  </a>
+</motion.div>
     </section>
   );
 }

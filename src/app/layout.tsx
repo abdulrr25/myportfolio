@@ -6,6 +6,7 @@ import Providers from "@/container/provider";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-controller";
 
+
 const sora = Sora({
   subsets: ["latin"],
   variable: '--font-sora',

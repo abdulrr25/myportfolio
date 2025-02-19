@@ -6,7 +6,7 @@ export const links: Link[] = [
   { nameEng: "Projects", hash: "#projects" },
   { nameEng: "Skills", hash: "#skills" },
   { nameEng: "Contact", hash: "#contact" },
-];
+] as const;
 
 export const projectsData: ProjectInfo[] = [
   {

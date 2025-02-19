@@ -19,7 +19,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
     <div className="md:hidden fixed top-5 right-5 z-[999] flex flex-col items-end gap-2">
       {/* Menu Button */}
       <button
-        className="bg-white w-[3rem] h-[3rem] drop-shadow-lg border border-slate-400 dark:border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center dark:bg-gray-950"
+        className="bg-white w-[3rem] h-[3rem] drop-shadow-lg border border-slate-400 dark:border-slate-300 border-opacity-40 shadow-2xl rounded-full flex items-center justify-center dark:bg-gray-950"
         onClick={() => setIsOpen(!isOpen)}
       >
         <Hamburger toggled={isOpen} toggle={setIsOpen} size={20} />
