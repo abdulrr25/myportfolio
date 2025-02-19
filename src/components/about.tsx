@@ -47,7 +47,7 @@ export default function About() {
         <Fade direction="right" delay={600} cascade damping={0.1} triggerOnce={true}>
           <div className="flex-1 flex justify-center">
             <Image
-              src="/about.png"
+              src="/Abdul.png"
               width="300"
               height="300"
               alt="Abdul Rahman"
