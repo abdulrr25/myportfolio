@@ -12,68 +12,51 @@ export default function About() {
 
   return (
     <motion.section
-      className="max-w-[45rem] text-center mt-32 leading-8 mb-28 sm:mb-40 scroll-mt-28"
+      className="max-w-4xl text-center mt-24 mb-20 scroll-mt-20 px-6 sm:px-12"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
+      transition={{ delay: 0.15 }}
       ref={ref}
       id="about"
     >
-      <div className="container mx-auto">
-      <Fade direction="up" delay={400} cascade damping={1e-1} triggerOnce={true}>
-        <SectionHeading>
-          About Me
-        </SectionHeading>
+      <Fade direction="up" delay={300} cascade damping={0.1} triggerOnce={true}>
+        <SectionHeading>About Me</SectionHeading>
       </Fade>
-        
 
-        <div className="grid xl:grid-cols-2 lg:text-start">
-
-          <div className="flex-1">
-            {/* Content */}
-            <div className="text-lg mt-12 xl:mt-3">
-              <div className="flex justify-start flex-col">
-              
-              
-              
-
-              <Fade direction="up" delay={400} cascade damping={1e-1} triggerOnce={true}>
-                <h3 className="font-bold mt-6">Our Mission</h3>
-              </Fade>
-              <Fade direction="up" delay={600} cascade damping={1e-1} triggerOnce={true}>
-                <p className="mt-2 leading-relaxed text-sm text-gray-700 dark:text-white/70">
-                We believe that a website is the foundation of a successful online presence, and our goal is to help businesses establish a strong digital presence. Our process begins with understanding your business goals.
-                </p>
-              </Fade>
-              <Fade direction="up" delay={800} cascade damping={1e-1} triggerOnce={true}>
-                <h3 className="font-bold mt-6">Our Vision</h3>
-              </Fade>
-              <Fade direction="up" delay={1000} cascade damping={1e-1} triggerOnce={true}>
-                  <p className="mt-2 leading-relaxed text-sm text-gray-700 dark:text-white/70">
-                  We then use this information to create a custom website that not only reflects your brand but also helps you achieve your business objectives. From responsive design to intuitive navigation, we focus on every detail.
-                  </p>
-              </Fade>
-                
-
-
-              </div>
-            </div>
-          </div>
-          <div>
-          <Fade direction="right" delay={600} cascade damping={1e-1} triggerOnce={true}>
-          <Image
-              src="/about.png"
-              width="600"
-              height="600"
-              alt="portrait"
-              quality="100"
-              priority={true}
-              className="rounded-full mt-8 object-cover"
-            />
+      <div className="flex flex-col-reverse lg:flex-row items-center gap-10 mt-8">
+        {/* Left - Text Section */}
+        <div className="text-gray-800 dark:text-white/70 text-lg leading-relaxed flex-1 text-justify">
+          <Fade direction="up" delay={500} cascade damping={0.1} triggerOnce={true}>
+            <p>
+              Hi, I'm <span className="font-semibold text-black dark:text-white">Abdul Rahman</span>, a 
+              <span className="font-semibold text-black dark:text-white"> Front-End Developer</span> passionate about building 
+              <span className="text-blue-500 dark:text-blue-400"> intuitive</span> and <span className="text-blue-500 dark:text-blue-400">interactive</span> web applications.
+            </p>
+            <p className="mt-3">
+              I specialize in <span className="font-semibold">Next.js, React, Tailwind CSS, and Web3</span>, with experience in
+              crafting smooth user experiences and blockchain-based applications.
+            </p>
+            <p className="mt-3">
+              Currently, I'm pursuing my <span className="font-semibold">B.Tech at ABES Engineering College</span>, while working on 
+              freelance projects and personal experiments to push my skills further.
+            </p>
           </Fade>
-          
-          </div>
         </div>
+
+        {/* Right - Image Section */}
+        <Fade direction="right" delay={600} cascade damping={0.1} triggerOnce={true}>
+          <div className="flex-1 flex justify-center">
+            <Image
+              src="/about.png"
+              width="300"
+              height="300"
+              alt="Abdul Rahman"
+              quality={100}
+              priority={true}
+              className="rounded-full shadow-lg border-4 border-gray-300 dark:border-gray-700"
+            />
+          </div>
+        </Fade>
       </div>
     </motion.section>
   );

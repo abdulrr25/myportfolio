@@ -41,6 +41,14 @@ export const projectsData: ProjectInfo[] = [
     imageUrl: "/image4.png",
     link: "https://github.com/abdulrr25/legal-llama",
   },
+  {
+    title: "Teacho - An Online Teaching Platform",
+    description:
+      "Designed and implemented a blockchain-based pay-per-second video streaming solution for online education.",
+    tags: ["React", "Next.js", "TypeScript", "MongoDB", "Tailwind", "Node.js", "Express", "SuperFluid", "Smart Contracts"],
+    imageUrl: "/image5.png",
+    link: "https://github.com/abdulrr25/Major-Project",
+  },
 ];
 
 // Skill Set with Icons
