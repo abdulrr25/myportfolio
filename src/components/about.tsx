@@ -1,11 +1,10 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import SectionHeading from "./section-heading";
-import { Fade } from "react-awesome-reveal";
 import { useSectionInView } from "@/lib/useInView";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Fade } from "react-awesome-reveal";
+import SectionHeading from "./section-heading";
 
 export default function About() {
   const { ref } = useSectionInView("#about");
@@ -29,7 +28,7 @@ export default function About() {
           <Fade direction="up" delay={500} cascade damping={0.1} triggerOnce={true}>
             <p>
               Hi, I'm <span className="font-semibold text-black dark:text-white">Abdul Rahman</span>, a 
-              <span className="font-semibold text-black dark:text-white"> Front-End Developer</span> passionate about building 
+              <span className="font-semibold text-black dark:text-white"> Full Stack Web Developer</span> passionate about building 
               <span className="text-blue-500 dark:text-blue-400"> intuitive</span> and <span className="text-blue-500 dark:text-blue-400">interactive</span> web applications.
             </p>
             <p className="mt-3">
@@ -37,9 +36,10 @@ export default function About() {
               crafting smooth user experiences and blockchain-based applications.
             </p>
             <p className="mt-3">
-              Currently, I'm pursuing my <span className="font-semibold">B.Tech at ABES Engineering College</span>, while working on 
-              freelance projects and personal experiments to push my skills further.
-            </p>
+  I graduated in <span className="font-semibold">B.Tech from ABES Engineering College in 2025</span> and have been working on 
+  freelance projects and personal experiments to continuously enhance my skills.
+</p>
+
           </Fade>
         </div>
 

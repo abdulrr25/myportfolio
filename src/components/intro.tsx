@@ -1,15 +1,14 @@
 "use client";
-import Image from "next/image";
-import React from "react";
+import { useActiveSectionContext } from "@/container/active-section";
+import { useSectionInView } from "@/lib/useInView";
+import ArrowDownTrayIcon from "@heroicons/react/24/solid/ArrowDownTrayIcon";
 import { motion } from "framer-motion";
-import { Fade } from "react-awesome-reveal";
+import { Mail } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { Fade } from "react-awesome-reveal";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
-import { useSectionInView } from "@/lib/useInView";
-import { Mail } from "lucide-react";
-import { useActiveSectionContext } from "@/container/active-section";
-import ArrowDownTrayIcon from "@heroicons/react/24/solid/ArrowDownTrayIcon";
 
 export default function Intro() {
   const { ref } = useSectionInView("#home", 0.5);
@@ -64,8 +63,7 @@ export default function Intro() {
         <h1 className="mb-10 mt-4 px-4 text-2xl sm:text-4xl">
           <span className="font-medium !leading-[1.5] ">Welcome to My Portfolio</span>{" "}
           <p className="text-[14px]">
-            I'm Abdul Rahman, a passionate web developer creating modern and responsive websites. Let's bring your ideas to life!
-          </p>
+I'm Abdul Rahman, a passionate full-stack developer dedicated to building modern, scalable, and user-friendly web applications. Let's turn your vision into powerful digital experiences!          </p>
         </h1>
       </Fade>
 
@@ -106,7 +104,7 @@ export default function Intro() {
 
   {/* Resume Button */}
   <a
-    href="https://drive.google.com/file/d/1SgVEjhxCOdagpWPzZhiSZaFbFVaRTxq2/view?usp=sharing"
+    href="https://drive.google.com/file/d/15tz8kBrX_cI9s6snFUnA-Xhvns7v0Bvs/view?usp=sharing"
     target="_blank"
     rel="noopener noreferrer"
     className="bg-gray-900 p-4 text-white flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
