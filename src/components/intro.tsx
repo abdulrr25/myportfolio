@@ -104,7 +104,7 @@ I'm Abdul Rahman, a passionate full-stack developer dedicated to building modern
 
   {/* Resume Button */}
   <a
-    href="https://drive.google.com/file/d/1Rtz7E_Gmwgb8MMqdmaAb7QAjSe2VOsXQ/view?usp=drivesdk"
+    href="https://drive.google.com/file/d/1KAf4iOSM-j0hPecSqMGLbIJgnQUJAovL/view?usp=drivesdk"
     target="_blank"
     rel="noopener noreferrer"
     className="bg-gray-900 p-4 text-white flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
