@@ -5,7 +5,7 @@ import { links } from "@/lib/data";
 
 export default function Navbar() {
   return (
-    <nav>
+    <nav className="relative z-[999]">
       <HamburgerMenu links={links} />
       <Header links={links} />
     </nav>

@@ -1,118 +1,116 @@
-import { Link, ProjectInfo } from "./types";
+// lib/data.ts
 
-export const links: Link[] = [
-  { nameEng: "Home", hash: "#home" },
-  { nameEng: "About", hash: "#about" },
-  { nameEng: "Projects", hash: "#projects" },
-  { nameEng: "Skills", hash: "#skills" },
-  { nameEng: "Contact", hash: "#contact" },
-] as const;
-
-export const projectsData: ProjectInfo[] = [
+// ======================
+// NAVBAR LINKS
+// ======================
+export const links = [
   {
-    title: "New Rangoli Builders Website",
+    nameEng: "Home",
+    hash: "#home",
+  },
+  {
+    nameEng: "About",
+    hash: "#about",
+  },
+  {
+    nameEng: "Projects",
+    hash: "#projects",
+  },
+  {
+    nameEng: "Skills",
+    hash: "#skills",
+  },
+  {
+    nameEng: "Contact",
+    hash: "#contact",
+  },
+];
+
+// ======================
+// PROJECTS DATA
+// ======================
+export const projectsData = [
+  {
+    title: "TEACHO – Blockchain Learning Platform",
     description:
-      "Freelance project for an interior designing firm. Built using Next.js, Tailwind CSS, and Framer Motion.",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-    imageUrl: "/image1.png",
+      "Built a decentralized online learning platform with pay-per-second video streaming using Superfluid. Designed a full-stack system enabling real-time payments, teacher-student marketplace, and seamless video interaction.",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Solidity",
+      "Superfluid",
+      "WebRTC",
+      "Blockchain",
+    ],
+    imageUrl: "/teacho.png",
+    link: "https://github.com/Teacho",
+  },
+
+  // {
+  //   title: "Smart Documentation Hub",
+  //   description:
+  //     "Engineered a real-time collaborative document editor supporting multi-user editing with instant synchronization. Built backend using ASP.NET Core and SignalR to handle concurrent updates and ensure conflict-free collaboration.",
+  //   tags: [
+  //     "React",
+  //     "ASP.NET Core",
+  //     "SignalR",
+  //     "SQL Server",
+  //     "Real-time Systems",
+  //   ],
+  //   imageUrl: "/projects/smart-doc.png",
+  //   link: "https://github.com/abdulrr25",
+  // },
+
+  {
+    title: "LegalLama – AI Legal Assistant",
+    description:
+      "Developed a full-stack AI platform using Retrieval-Augmented Generation (RAG) to generate legal responses. Integrated semantic search over legal datasets and stored response hashes on blockchain for data integrity.",
+    tags: [
+      "Next.js",
+      "Node.js",
+      "PostgreSQL",
+      "OpenAI",
+      "RAG",
+      "Blockchain",
+    ],
+    imageUrl: "/legal.png",
+    link: "https://github.com/abdulrr25",
+  },
+
+  {
+    title: "Interior Designer Website (Freelance)",
+    description:
+      "Delivered a production-ready website for a real client, focusing on performance, modern UI, and smooth animations. Handled end-to-end development from requirement gathering to deployment.",
+    tags: [
+      "Next.js",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Responsive Design",
+    ],
+    imageUrl: "/interior.png",
     link: "https://www.newrangolibuilders.in",
   },
+
   {
-    title: "Tesla Clone",
+    title: "Shopify Clone",
     description:
-      "A self-learning project replicating Tesla's website UI with Next.js and Tailwind CSS.",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind"],
-    imageUrl: "/image2.png",
-    link: "https://tesla-clone-flax-kappa.vercel.app/",
-  },
-  {
-    title: "Shopify Website Clone",
-    description:
-      "Built a front-end for a Shopify-like clothing store using Next.js and Tailwind CSS.",
-    tags: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Tailwind",
-      "MongoDB",
-      "Node.js",
-      "Express",
-    ],
-    imageUrl: "/image3.png",
-    link: "https://shopifyy-tau.vercel.app/",
-  },
-  {
-    title: "Legal-Llama",
-    description:
-      "AI-powered legal case validator with blockchain verification. Built for BNB Chainlink Hackathon.",
-    tags: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "MongoDB",
-      "Tailwind",
-      "Node.js",
-      "Express",
-      "SuperFluid",
-      "Smart Contracts",
-    ],
-    imageUrl: "/image4.png",
-    link: "https://github.com/abdulrr25/legal-llama",
-  },
-  {
-    title: "Teacho - An Online Teaching Platform",
-    description:
-      "Designed and implemented a blockchain-based pay-per-second video streaming solution for online education.",
-    tags: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "MongoDB",
-      "Tailwind",
-      "Node.js",
-      "Express",
-      "SuperFluid",
-      "Smart Contracts",
-    ],
-    imageUrl: "/image5.png",
-    link: "https://github.com/abdulrr25/Major-Project",
+      "Recreated Shopify-style UI with responsive layouts and dynamic components. Focused on frontend architecture, reusable components, and user experience.",
+    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    imageUrl: "/shopify.png",
+    link: "https://github.com/abdulrr25",
   },
 ];
 
-// Skill Set with Icons
+// ======================
+// SKILLS DATA (for compatibility)
+// ======================
 export const skillsData = [
-  // Web Technologies & Frontend
-  { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-  { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-  { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-  { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-  { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-  { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-  { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
-
-  // Programming Languages & Frameworks
-  { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-  { name: "Spring Boot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" }, // Using the general Spring icon
-  { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-  { name: "C/C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
-
-  // Databases & Backend (Basic/Learned)
-  { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-  { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-  { name: "Node.js (Basic)", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-  { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-
-  // Testing & DevOps
-  { name: "Selenium", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" },
-  { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-  { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-  { name: "Linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
+  { name: "Next.js", icon: "/nextjs.png" },
+  { name: "React", icon: "/react.png" },
+  { name: "Node.js", icon: "/node.png" },
+  { name: "Java", icon: "/java.png" },
+  { name: "ASP.NET", icon: "/dotnet.png" },
+  { name: "PostgreSQL", icon: "/sql.png" },
+  { name: "MongoDB", icon: "/mongo.png" },
+  { name: "Solidity", icon: "/solidity.png" },
 ];
-
-
-
-// Button to view more projects on GitHub
-export const moreProjectsButton = {
-  text: "View More on GitHub",
-  link: "https://github.com/abdulrr25?tab=repositories",
-};

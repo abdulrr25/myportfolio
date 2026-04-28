@@ -14,8 +14,9 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        Sora: [`var(--font-sora)`, 'sans-serif'],
-      },
+      sans: ['var(--font-inter)'],
+      serif: ['var(--font-playfair)'],
+    },
     },
   },
   plugins: [],

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#0f172a" />
+  
+  <rect x="48" y="48" width="416" height="416" fill="none" stroke="#D4AF37" stroke-width="16" />
+
+  <text 
+    x="50%" 
+    y="53%" 
+    font-family="'Playfair Display', Georgia, 'Times New Roman', serif" 
+    font-size="210" 
+    font-weight="bold" 
+    fill="#D4AF37" 
+    text-anchor="middle" 
+    dominant-baseline="middle" 
+    letter-spacing="5"
+  >
+    A.R.
+  </text>
+</svg>

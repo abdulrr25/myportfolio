@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "@/lib/types";
 import clsx from "clsx";
 import NextLink from "next/link";
-import { Menu } from "lucide-react";
 import Hamburger from "hamburger-react";
 import { useActiveSectionContext } from "@/container/active-section";
 
@@ -15,51 +14,86 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
-  return (
-    <div className="md:hidden fixed top-5 right-5 z-[999] flex flex-col items-end gap-2">
-      {/* Menu Button */}
-      <button
-        className="bg-white w-[3rem] h-[3rem] drop-shadow-lg border border-slate-400 dark:border-slate-300 border-opacity-40 shadow-2xl rounded-full flex items-center justify-center dark:bg-gray-950"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <Hamburger toggled={isOpen} toggle={setIsOpen} size={20} />
-      </button>
+  // Prevent background scrolling when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
 
-      {/* Menu Dropdown */}
+  return (
+    <>
+      {/* Soft Glass Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.8, opacity: 0 }}
-            transition={{ type: "spring", stiffness: 200, damping: 20 }}
-            className="w-56 bg-white drop-shadow-lg border border-slate-400 dark:border-white border-opacity-60 shadow-2xl rounded-2xl flex flex-col items-center justify-center dark:bg-gray-950 p-2"
-          >
-            {links.map((link, index) => (
-              <NextLink
-                key={link.hash}
-                href={link.hash}
-                className={clsx(
-                  "flex w-full items-center justify-center px-4 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300 cursor-pointer",
-                  {
-                    "text-gray-950 bg-slate-200 dark:text-gray-200 dark:bg-gray-700 rounded": activeSection === link.hash,
-                    "rounded-t-xl": index === 0,
-                    "rounded-b-xl": index === links.length - 1,
-                  }
-                )}
-                onClick={() => {
-                  setActiveSection(link.hash);
-                  setTimeOfLastClick(Date.now());
-                  setIsOpen(false); // Close menu on click
-                }}
-              >
-                {link.nameEng}
-              </NextLink>
-            ))}
-          </motion.div>
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden fixed inset-0 z-[998] bg-slate-900/10 dark:bg-black/40 backdrop-blur-sm"
+            onClick={() => setIsOpen(false)}
+          />
         )}
       </AnimatePresence>
-    </div>
+
+      <div className="md:hidden fixed top-5 right-5 z-[999] flex flex-col items-end gap-3">
+        
+        {/* Sleek Circular Menu Button */}
+        <motion.button
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          className="w-12 h-12 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 shadow-lg rounded-full flex items-center justify-center text-slate-900 dark:text-white hover:scale-105 transition-transform"
+        >
+          <Hamburger 
+            toggled={isOpen} 
+            toggle={setIsOpen} 
+            size={20} 
+            duration={0.3}
+            color="currentColor"
+          />
+        </motion.button>
+
+        {/* Premium Floating Dropdown Card */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -10, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -10, scale: 0.95 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="w-56 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-slate-200 dark:border-slate-800 shadow-2xl rounded-2xl overflow-hidden flex flex-col py-2"
+            >
+              {links.map((link) => (
+                <NextLink
+                  key={link.hash}
+                  href={link.hash}
+                  className={clsx(
+                    "flex w-full items-center px-5 py-3.5 text-sm font-medium transition-colors",
+                    {
+                      "text-[#D4AF37] bg-slate-50 dark:bg-slate-800/50": activeSection === link.hash,
+                      "text-slate-600 hover:text-slate-900 hover:bg-slate-50 dark:text-slate-400 dark:hover:text-white dark:hover:bg-slate-800/50": activeSection !== link.hash,
+                    }
+                  )}
+                  onClick={() => {
+                    setActiveSection(link.hash);
+                    setTimeOfLastClick(Date.now());
+                    setIsOpen(false);
+                  }}
+                >
+                  {link.nameEng}
+                </NextLink>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </>
   );
 };
 

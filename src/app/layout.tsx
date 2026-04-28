@@ -1,21 +1,29 @@
 import type { Metadata } from "next";
-import { Sora } from "next/font/google";
-import "./globals.css";
+import { Inter, Playfair_Display } from "next/font/google";
+import "./globals.css"
 import Navbar from "@/components/navbar";
 import Providers from "@/container/provider";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-controller";
 
-
-const sora = Sora({
+// --- TYPOGRAPHY SETUP ---
+// Inter: Clean, modern sans-serif for body copy and technical specs
+const inter = Inter({
   subsets: ["latin"],
-  variable: '--font-sora',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800'], 
+  variable: "--font-inter",
+  display: "swap",
+});
+
+// Playfair Display: Classical, elegant serif for high-impact headers
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Abdul Rahman",
-  description: "My portfolio",
+  title: "Abdul Rahman | Full-Stack Engineer",
+  description: "Portfolio of Abdul Rahman, a full-stack engineer specializing in scalable AI and Web3 architectures.",
 };
 
 export default function RootLayout({
@@ -24,15 +32,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    // suppressHydrationWarning is required when using next-themes at the root level
+    <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${sora.variable} font-Sora flex flex-col bg-gray-50 text-gray-950 relative dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+        className={`${inter.variable} ${playfair.variable} font-sans bg-slate-50 text-slate-900 relative dark:bg-slate-950 dark:text-slate-50 min-h-screen flex flex-col antialiased selection:bg-[#D4AF37]/30 selection:text-slate-900 dark:selection:text-white`}
       >
-        <div className="bg-[#fbe2e3] absolute top-[-6rem] flex-1 -z-[10] right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
-        <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-[10]  flex-1 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
+        {/* BACKGROUND GLOW EFFECTS (Architectural/Premium Colors) */}
+        
+        {/* Subtle Slate/Gold glow top right */}
+        <div className="absolute top-[-6rem] right-[11rem] h-[31.25rem] w-[31.25rem] -z-[10] rounded-full blur-[10rem] sm:w-[68.75rem] bg-slate-200/50 dark:bg-slate-900/50 opacity-80 mix-blend-multiply dark:mix-blend-screen pointer-events-none"></div>
+        
+        {/* Subtle Gold/Navy glow top left */}
+        <div className="absolute top-[-1rem] left-[-35rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] h-[31.25rem] w-[50rem] sm:w-[68.75rem] -z-[10] rounded-full blur-[12rem] bg-[#D4AF37]/5 dark:bg-[#D4AF37]/10 pointer-events-none"></div>
+
+        {/* Global Providers & Structure */}
         <Providers>
           <Navbar />
-          {children}
+          <main className="flex-1 w-full flex flex-col items-center">
+            {children}
+          </main>
           <Footer />
           <ThemeSwitch />
         </Providers>
