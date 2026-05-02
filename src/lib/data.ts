@@ -4,26 +4,13 @@
 // NAVBAR LINKS
 // ======================
 export const links = [
-  {
-    nameEng: "Home",
-    hash: "#home",
-  },
-  {
-    nameEng: "About",
-    hash: "#about",
-  },
-  {
-    nameEng: "Projects",
-    hash: "#projects",
-  },
-  {
-    nameEng: "Skills",
-    hash: "#skills",
-  },
-  {
-    nameEng: "Contact",
-    hash: "#contact",
-  },
+  { nameEng: "Home", hash: "#home" },
+  { nameEng: "About", hash: "#about" },
+  { nameEng: "Projects", hash: "#projects" },
+  { nameEng: "Skills", hash: "#skills" },
+  { nameEng: "Experience", hash: "#experience" },
+  { nameEng: "Achievements", hash: "#achievements" },
+  { nameEng: "Contact", hash: "#contact" },
 ];
 
 // ======================
@@ -31,78 +18,49 @@ export const links = [
 // ======================
 export const projectsData = [
   {
-    title: "TEACHO – Blockchain Learning Platform",
+    title: "LLM Chat – Multi-Model AI Platform",
     description:
-      "Built a decentralized online learning platform with pay-per-second video streaming using Superfluid. Designed a full-stack system enabling real-time payments, teacher-student marketplace, and seamless video interaction.",
-    tags: [
-      "Next.js",
-      "TypeScript",
-      "Solidity",
-      "Superfluid",
-      "WebRTC",
-      "Blockchain",
-    ],
-    imageUrl: "/teacho.png",
-    link: "https://github.com/Teacho",
+      "Full-stack AI chat platform with multi-model inference (LLaMA 3.3, Mixtral, Gemma), real-time SSE streaming, and a RAG pipeline using FAISS for semantic search over PDFs and URLs. Includes a ReAct-pattern AI Agent with six tools: weather, web search, document retrieval, calculator, datetime, and Python REPL.",
+    tags: ["FastAPI", "React", "Groq API", "LangChain", "FAISS", "Python", "SSE", "RAG"],
+    imageUrl: "/llm-chat.png",
+    link: "https://github.com/abdulrr25",
   },
-
-  // {
-  //   title: "Smart Documentation Hub",
-  //   description:
-  //     "Engineered a real-time collaborative document editor supporting multi-user editing with instant synchronization. Built backend using ASP.NET Core and SignalR to handle concurrent updates and ensure conflict-free collaboration.",
-  //   tags: [
-  //     "React",
-  //     "ASP.NET Core",
-  //     "SignalR",
-  //     "SQL Server",
-  //     "Real-time Systems",
-  //   ],
-  //   imageUrl: "/projects/smart-doc.png",
-  //   link: "https://github.com/abdulrr25",
-  // },
-
   {
-    title: "LegalLama – AI Legal Assistant",
+    title: "TEACHO – Decentralized Teaching Platform",
     description:
-      "Developed a full-stack AI platform using Retrieval-Augmented Generation (RAG) to generate legal responses. Integrated semantic search over legal datasets and stored response hashes on blockchain for data integrity.",
-    tags: [
-      "Next.js",
-      "Node.js",
-      "PostgreSQL",
-      "OpenAI",
-      "RAG",
-      "Blockchain",
-    ],
+      "Decentralized online education platform with pay-per-second video streaming using Superfluid Protocol. Features on-chain continuous tuition payment flows, gig-based class purchases, Huddle video meetings, and a modular Next.js + TypeScript frontend.",
+    tags: ["Next.js", "TypeScript", "Solidity", "Superfluid", "Blockchain", "WebRTC"],
+    imageUrl: "/teacho.png",
+    link: "https://github.com/abdulrr25",
+  },
+  {
+    title: "LegalLama – AI Legal Research Assistant",
+    description:
+      "AI-powered legal research platform using RAG over structured legal datasets for accurate, context-aware query responses. Integrates OpenAI API for semantic understanding of legal contracts. Anchors AI response hashes to a Solidity smart contract for tamper-proof on-chain auditability.",
+    tags: ["Next.js", "Node.js", "PostgreSQL", "OpenAI", "RAG", "Solidity", "Chainlink"],
     imageUrl: "/legal.png",
     link: "https://github.com/abdulrr25",
   },
-
+  {
+    title: "Smart Documentation Hub",
+    description:
+      "Real-time collaborative document editing platform with multi-user support built during CDAC. Features simultaneous editing, live synchronization via SignalR, and conflict-free collaboration. React frontend with ASP.NET Core backend.",
+    tags: ["React", "ASP.NET Core", "SignalR", "SQL Server", "Real-time"],
+    imageUrl: "/smart-doc.png",
+    link: "https://github.com/abdulrr25",
+  },
   {
     title: "Interior Designer Website (Freelance)",
     description:
-      "Delivered a production-ready website for a real client, focusing on performance, modern UI, and smooth animations. Handled end-to-end development from requirement gathering to deployment.",
-    tags: [
-      "Next.js",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Responsive Design",
-    ],
+      "Production-ready client website delivered end-to-end — from requirement gathering to deployment. Mobile-optimized with scroll animations, clean visual hierarchy, and modern UI/UX practices. Live at newrangolibuilders.in.",
+    tags: ["Next.js", "Tailwind CSS", "Framer Motion", "JavaScript", "Responsive"],
     imageUrl: "/interior.png",
     link: "https://www.newrangolibuilders.in",
-  },
-
-  {
-    title: "Shopify Clone",
-    description:
-      "Recreated Shopify-style UI with responsive layouts and dynamic components. Focused on frontend architecture, reusable components, and user experience.",
-    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
-    imageUrl: "/shopify.png",
-    link: "https://github.com/abdulrr25",
   },
 ];
 
 // ======================
-// SKILLS DATA (for compatibility)
+// SKILLS DATA (icon grid, legacy)
 // ======================
 export const skillsData = [
   { name: "Next.js", icon: "/nextjs.png" },

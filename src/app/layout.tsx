@@ -22,8 +22,28 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Abdul Rahman | Full-Stack Engineer",
-  description: "Portfolio of Abdul Rahman, a full-stack engineer specializing in scalable AI and Web3 architectures.",
+  title: "Abdul Rahman | Software Engineer",
+  description:
+    "Portfolio of Abdul Rahman — a software engineer building AI-native apps, full-stack systems, and blockchain-powered platforms. Specializing in LLM pipelines, RAG, Next.js, and Web3.",
+  keywords: [
+    "Abdul Rahman",
+    "Software Engineer",
+    "Full-Stack Developer",
+    "AI Engineer",
+    "Next.js",
+    "React",
+    "LangChain",
+    "RAG",
+    "Blockchain",
+    "Solidity",
+    "Portfolio",
+  ],
+  openGraph: {
+    title: "Abdul Rahman | Software Engineer",
+    description:
+      "Building AI-native apps, full-stack systems, and blockchain-powered platforms.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
